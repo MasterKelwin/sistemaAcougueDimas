@@ -27,8 +27,7 @@ const exibeSenha = () => {
 document.addEventListener('keypress', function (e) {
     if (e.which == 13) {
         exibeSenha();
+    }else {
+        return;
     }
 });
-
-const proximaSenha = document.querySelector(".senhaAtual");
-console.log(proximaSenha);

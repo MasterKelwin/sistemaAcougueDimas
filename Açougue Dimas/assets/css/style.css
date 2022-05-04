@@ -5,7 +5,7 @@ body {
     background: linear-gradient(45deg, rgba(11,68,138,1) 0%, rgba(81,138,208,1) 100%);
 }
 
-main {
+.container-inicializacao {
     height: 85vh;
     display: flex;
     justify-content: space-around;
@@ -30,6 +30,7 @@ ol {
     justify-content: flex-end;
     box-sizing: border-box;
     color: var(--cor-base);
+    width: 25%;
 }
 
 .input {
@@ -43,6 +44,7 @@ ol {
     padding: 1.2rem .5rem .5rem;
     height: 2.75rem;
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .input-label {
@@ -74,11 +76,32 @@ footer {
     background-color: #fff;
     display: flex;    
     justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--cor-primaria);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 h1 {
     font-weight: bold;
 }
 
+.logo {
+    max-height: 50px;
+}
 
+.instrucaoInscrever__titulo, .instrucaoInscrever__lista {
+    text-align: center;
+}
 
+.instrucaoInscrever__titulo {
+    margin: 0 0 .5rem 0;
+}
+
+.compras {
+    text-align: center;
+}
+
+.compras__titulo {
+    margin: 0 0 .5rem 0;
+}

@@ -14,33 +14,35 @@
 </head>
 <body>
     <main>
-        <article>
-            <ol id="lista">
-                <li class="instrucao">1- Aperte F11</li>
-                <li class="instrucao">2- Digite a senha do dia</li>
-                <li class="instrucao">3- Aperte enter para começar</li>
-                <li class="instrucao">4- A cada cliente atendido, pressione enter novamente</li>
-            </ol>
-        </article>
-        <div class="input-container">
-            <input type="number" id="senha" class="input" placeholder="Insira aqui a senha" required>
-            <label class="input-label" for="senha">Senha</label>
+        <div class="container-inicializacao">
+            <article>
+                <ol id="lista">
+                    <li class="instrucao">1- Aperte F11</li>
+                    <li class="instrucao">2- Digite a senha do dia</li>
+                    <li class="instrucao">3- Aperte enter para começar</li>
+                    <li class="instrucao">4- A cada cliente atendido, pressione enter novamente</li>
+                </ol>
+            </article>
+            <div class="input-container">
+                <input type="number" id="senha" class="input" placeholder="Insira aqui a senha" required>
+                <label class="input-label" for="senha">Senha</label>
+            </div>
         </div>
         <!--div para a inserção da senha-->
         <div class="inicia-aplicacao"></div>
     </main>
     <footer>
         <div>
-            <h1>RECEBA OFERTAS EM SEU TELEFONE!</h1>
-            <ol>
-                <li>Salve nosso contato: <strong>(27) 99966-2202</strong></li>
-                <li>Envie a seguinte mensagem: "Eu quero"</li>
-                <li>Pronto, você foi registrado e receberá ofertas diárias</li>
+            <h1 class="instrucaoInscrever__titulo">RECEBA OFERTAS EM SEU TELEFONE!</h1>
+            <ol class="instrucaoInscrever__lista">
+                <li>1- Salve nosso contato: <strong>(27) 99966-2202</strong></li>
+                <li>2- Envie a seguinte mensagem: "Eu quero"</li>
+                <li>3- Pronto, você foi registrado e receberá ofertas diárias</li>
             </ol>
         </div>
-        <img src="assets/imgs/logo.png">
-        <div>
-            <h1>FAÇA COMPRAS PELO WHATSAPP!</h1>
+        <img class="logo" src="assets/imgs/logo.png">
+        <div class="compras">
+            <h1 class="compras__titulo">FAÇA COMPRAS PELO WHATSAPP!</h1>
             <p>(27) 99500-8607 ou ligue no 3735-1900</p>
         </div>
     </footer>  
