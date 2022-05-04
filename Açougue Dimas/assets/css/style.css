@@ -1,0 +1,46 @@
+:root {
+    --cor-primaria: #0071ea;
+    --cor-secundaria: #d6eaff;
+    --cor-contraste-escuro: #4D4D4D;
+    --cor-contraste-claro: #fff;
+    --cor-aviso: #df2525;
+    --cor-sucesso: #047900;
+    --cor-transparencia: #4d4d4d33;
+
+    --sombra: 0 5px 10px #55a6ff38;
+}
+
+body {
+    background-color: red;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ol {
+    height: 10%;
+    text-align: left;
+}
+
+li {
+    margin: 1em;
+}
+
+footer {
+    height: 15vh;
+    background-color: #fff;
+    display: flex;    
+    justify-content: space-around;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+
+
