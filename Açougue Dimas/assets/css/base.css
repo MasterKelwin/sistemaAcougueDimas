@@ -1,0 +1,10 @@
+:root {
+    --cor-primaria: #0b448a;
+    --cor-secundaria: #518ad0;
+    --cor-base: #152bb1;
+    --cor-contraste-escuro: #000;
+    --cor-contraste-claro: #fff;
+    --cor-sucesso: #047900;
+    --cor-transparencia: #4d4d4d33;
+    --sombra: 0 5px 10px #55a6ff38;
+}

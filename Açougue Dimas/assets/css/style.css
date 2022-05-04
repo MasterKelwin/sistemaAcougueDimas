@@ -1,15 +1,3 @@
-:root {
-    --cor-primaria: #0071ea;
-    --cor-secundaria: #d6eaff;
-    --cor-contraste-escuro: #4D4D4D;
-    --cor-contraste-claro: #fff;
-    --cor-aviso: #df2525;
-    --cor-sucesso: #047900;
-    --cor-transparencia: #4d4d4d33;
-
-    --sombra: 0 5px 10px #55a6ff38;
-}
-
 body {
     background-color: red;
     font-family: 'Montserrat', sans-serif;
@@ -27,8 +15,51 @@ ol {
     text-align: left;
 }
 
-li {
+.instrucao {
     margin: 1em;
+    color: var(--cor-contraste-claro);
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.input {
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    padding: 1.2rem .5rem .5rem;
+    height: 2.75rem;
+    width: 100%;
+}
+
+.input-label {
+    position: absolute;
+    top: 1.25rem;
+    left: .5rem;
+    font-size: 1rem;
+    transition: all .25s;
+}
+
+.input::placeholder {
+    visibility: hidden;
+    color: #000;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input:not(:placeholder-shown) + .input-label, .input:focus + .input-label {
+    font-size: 0.875rem;
+    top: 0.25rem;
+    transition: all .2s;
 }
 
 footer {

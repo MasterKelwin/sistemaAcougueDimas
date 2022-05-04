@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -14,14 +15,19 @@
 <body>
     <main>
         <article>
-            <ol>
-                <li>1- Aperte F11</li>
-                <li>2- Digite a senha do dia</li>
-                <li>3- Aperte enter para começar</li>
-                <li>4- A cada cliente atendido, pressione enter novamente</li>
+            <ol id="lista">
+                <li class="instrucao">1- Aperte F11</li>
+                <li class="instrucao">2- Digite a senha do dia</li>
+                <li class="instrucao">3- Aperte enter para começar</li>
+                <li class="instrucao">4- A cada cliente atendido, pressione enter novamente</li>
             </ol>
         </article>
-        <input type="text" type="number" id="senha" placeholder="Insira aqui a senha" required>
+        <div class="input-container">
+            <input type="number" id="senha" class="input" placeholder="Insira aqui a senha" required>
+            <label class="input-label" for="senha">Senha</label>
+        </div>
+        <!--div para a inserção da senha-->
+        <div class="exibe-senha"></div>
     </main>
     <footer>
         <div>
@@ -37,6 +43,7 @@
             <h1>FAÇA COMPRAS PELO WHATSAPP!</h1>
             <p>(27) 99500-8607 ou ligue no 3735-1900</p>
         </div>
-    </footer>    
+    </footer>  
+    <script src="assets/scripts/senha.js"></script>
 </body>
 </html>
