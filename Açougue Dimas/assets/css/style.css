@@ -106,3 +106,28 @@ h1 {
 .compras__titulo {
     margin: 0 0 .5rem 0;
 }
+
+.container-senha {
+    font-size: 10rem;
+    font-weight: bold;
+    text-align: center;
+    margin: auto 0;
+    color: var(--cor-contraste-claro);
+}
+
+.container-executando-app {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-imagens {
+    width: 38.2%;
+    display: flex;
+}
+
+.imagem {
+    width: 100%;
+}
+
+
+
