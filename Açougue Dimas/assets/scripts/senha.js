@@ -1,6 +1,6 @@
 const input = document.querySelector("#senha");
 const lista = document.querySelector("#lista");
-const senhaDiv = document.querySelector(".exibe-senha");
+const senhaDiv = document.querySelector(".inicia-aplicacao");
 
 const removeInput = () => {
     senha.remove();
@@ -29,3 +29,6 @@ document.addEventListener('keypress', function (e) {
         exibeSenha();
     }
 });
+
+const proximaSenha = document.querySelector(".senhaAtual");
+console.log(proximaSenha);
