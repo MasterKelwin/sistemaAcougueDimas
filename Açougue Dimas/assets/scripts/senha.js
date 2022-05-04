@@ -1,9 +1,10 @@
 const input = document.querySelector("#senha");
 const lista = document.querySelector("#lista");
 const senhaDiv = document.querySelector(".inicia-aplicacao");
+const DivInicializacao = document.querySelector(".container-inicializacao");
 
-const removeInput = () => {
-    senha.remove();
+const removeDivInput = () => {
+    DivInicializacao.remove();
 }
 
 const removeLista = () => {
@@ -12,15 +13,21 @@ const removeLista = () => {
 
 const exibeSenha = () => {
     const containerSenha = document.createElement("div");
-    containerSenha.classList.add("senhaAtual");
+    containerSenha.classList.add("senhaAtual", "container-inicializacao");
+
+    const titulo = document.createElement("h1");
+    titulo.innerText = "Senha";
+    titulo.classList.add("paragrafo-titulo");
 
     const senhaReal = document.createElement("p");
+    senhaReal.classList.add("paragrafo-senha");
     senhaReal.innerText = input.value;
 
+    containerSenha.appendChild(titulo);
     containerSenha.appendChild(senhaReal);
     senhaDiv.appendChild(containerSenha);
 
-    removeInput();
+    removeDivInput();
     removeLista();
 }
 
