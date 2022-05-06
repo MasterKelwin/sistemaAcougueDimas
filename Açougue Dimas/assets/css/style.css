@@ -24,7 +24,6 @@ body::-webkit-scrollbar-thumb{
 
 ol {
     height: 10%;
-    text-align: left;
 }
 
 .instrucao {
@@ -83,7 +82,7 @@ ol {
 
 footer {
     height: 15vh;
-    background-color: #fff;
+    background-color: var(--cor-contraste-claro);
     display: flex;    
     justify-content: space-around;
     align-items: center;
