@@ -44,6 +44,7 @@ const geraHTML = () => {
     containerSenha.appendChild(senhaReal);
 }
 
+/*
 const novoCliente = () => {
     let senhaAtualizada = $(".senha__paragrafo").textContent;
 
@@ -55,6 +56,30 @@ const novoCliente = () => {
             return;
         }
 
+    }
+} 
+*/
+
+const novoCliente = () => {
+    implementaSenha();
+    removeSenha();
+}
+
+function removeSenha() {
+    const pSenha = $('.senha__paragrafo')
+    pSenha.remove();
+}
+
+function implementaSenha() {   
+    let senhaAtualizada = $(".senha__paragrafo").textContent;
+
+    if (senhaAtualizada <= 100) {
+        senhaAtualizada++
+        console.log(senhaAtualizada)
+        
+    } else {
+        alert("Favor repor as senhas!");
+        return;
     }
 }
 
