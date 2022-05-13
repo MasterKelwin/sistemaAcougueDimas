@@ -11,6 +11,7 @@ const removeDivInput = () => {
 const iniciaAplicacao = () => {
     geraHTML();
     removeDivInput();
+
 };
 
 const geraHTML = () => {
