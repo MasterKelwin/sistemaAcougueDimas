@@ -6,7 +6,7 @@ const divInicializacao = $(".container-inicializacao");
 
 const removeDivInput = () => {
     divInicializacao.remove();
-}
+};
 
 const iniciaAplicacao = () => {
     geraHTML();
@@ -44,26 +44,20 @@ const geraHTML = () => {
     containerSenha.appendChild(senhaReal);
 }
 
-const novoCliente = () => {
-    implementaSenha();
-}
-
 function implementaSenha() {   
     let senhaExibida = $(".senha__paragrafo");
     let senhaAtualizada =senhaExibida.textContent;
 
-    if (senhaAtualizada <= 100) {
+    if (senhaAtualizada < 100) {
         senhaAtualizada++;
         console.log(senhaAtualizada);
         senhaExibida.innerHTML = senhaAtualizada;
-
         
     } else {
         alert("Favor repor as senhas!");
         return;
     }
 }
-
 
 document.addEventListener('keypress', function (e) {
     if (e.which == 13) { //enter
@@ -75,7 +69,7 @@ document.addEventListener('keypress', function (e) {
 
 document.addEventListener('keypress', function (e) {
     if (e.which == 32) { //space
-        novoCliente();
+       implementaSenha();
     } else {
         return;
     }
