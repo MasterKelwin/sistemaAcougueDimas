@@ -46,10 +46,11 @@ const geraHTML = () => {
 
 function implementaSenha() {   
     let senhaExibida = $(".senha__paragrafo");
-    let senhaAtualizada = senhaExibida.textContent;
+    let senhaAtualizada =senhaExibida.textContent;
 
     if (senhaAtualizada < 100) {
         senhaAtualizada++;
+        console.log(senhaAtualizada);
         senhaExibida.innerHTML = senhaAtualizada;
         
     } else {
@@ -73,5 +74,3 @@ document.addEventListener('keypress', function (e) {
         return;
     }
 });
-
-
