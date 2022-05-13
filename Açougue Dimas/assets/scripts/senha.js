@@ -44,22 +44,6 @@ const geraHTML = () => {
     containerSenha.appendChild(senhaReal);
 }
 
-/*
-const novoCliente = () => {
-    let senhaAtualizada = $(".senha__paragrafo").textContent;
-
-    for (; ;) {
-        if (senhaAtualizada <= 100) {
-            senhaAtualizada++
-        } else {
-            alert("Favor repor as senhas!");
-            return;
-        }
-
-    }
-} 
-*/
-
 const novoCliente = () => {
     implementaSenha();
 }
