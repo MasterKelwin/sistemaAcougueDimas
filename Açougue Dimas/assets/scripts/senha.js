@@ -62,20 +62,17 @@ const novoCliente = () => {
 
 const novoCliente = () => {
     implementaSenha();
-    removeSenha();
-}
-
-function removeSenha() {
-    const pSenha = $('.senha__paragrafo')
-    pSenha.remove();
 }
 
 function implementaSenha() {   
-    let senhaAtualizada = $(".senha__paragrafo").textContent;
+    let senhaExibida = $(".senha__paragrafo");
+    let senhaAtualizada =senhaExibida.textContent;
 
     if (senhaAtualizada <= 100) {
-        senhaAtualizada++
-        console.log(senhaAtualizada)
+        senhaAtualizada++;
+        console.log(senhaAtualizada);
+        senhaExibida.innerHTML = senhaAtualizada;
+
         
     } else {
         alert("Favor repor as senhas!");
