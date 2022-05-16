@@ -4,14 +4,14 @@ const lista = $("#lista");
 const senhaDiv = $(".inicia-aplicacao");
 const divInicializacao = $(".container-inicializacao");
 
-const removeDivInput = () => {
-    divInicializacao.remove();
-};
-
 const iniciaAplicacao = () => {
     geraHTML();
     removeDivInput();
 
+};
+
+const removeDivInput = () => {
+    divInicializacao.remove();
 };
 
 const geraHTML = () => {
@@ -44,7 +44,7 @@ const geraHTML = () => {
     containerSenha.appendChild(senhaReal);
 }
 
-function implementaSenha() {   
+const implementaSenha = () => {   
     let senhaExibida = $(".senha__paragrafo");
     let senhaAtualizada = senhaExibida.textContent;
 
