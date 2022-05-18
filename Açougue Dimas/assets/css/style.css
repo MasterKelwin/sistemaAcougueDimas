@@ -117,11 +117,12 @@ h1 {
 }
 
 .container-senha {
-    font-size: 10rem;
+    font-size: 12rem;
     font-weight: bold;
     text-align: center;
     margin: auto 0;
     color: var(--cor-contraste-claro);
+    padding-right: .2em;
 }
 
 .container-executando-app {
@@ -132,6 +133,7 @@ h1 {
 .container-imagens {
     width: 38.2%;
     display: flex;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px -15px 70px 4px;
 }
 
 .imagem {

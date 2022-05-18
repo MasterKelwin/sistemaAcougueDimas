@@ -98,7 +98,7 @@ const implementaSenha = () => {
     let senhaExibida = $(".senha__paragrafo");
     let senhaAtualizada = senhaExibida.textContent;
 
-    if (senhaAtualizada < 100) {
+    if (senhaAtualizada < 1000) {
         senhaAtualizada++;
         senhaExibida.innerHTML = senhaAtualizada;
 
