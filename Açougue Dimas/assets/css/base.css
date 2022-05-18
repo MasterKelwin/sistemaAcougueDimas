@@ -8,3 +8,9 @@
     --cor-transparencia: #4d4d4d33;
     --sombra: 0 5px 10px #55a6ff38;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
