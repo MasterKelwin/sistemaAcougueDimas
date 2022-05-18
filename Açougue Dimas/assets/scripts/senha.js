@@ -3,6 +3,7 @@ const input = $("#senha");
 const lista = $("#lista");
 const senhaDiv = $(".inicia-aplicacao");
 const divInicializacao = $(".container-inicializacao");
+let inicializador = false;
 
 const iniciaAplicacao = () => {
     geraHTML();
@@ -109,17 +110,10 @@ const implementaSenha = () => {
 }
 
 document.addEventListener('keypress', function (e) {
-    if (e.which == 13) { //enter
+    if (e.which == 13 && inicializador == false) { //enter
         iniciaAplicacao();
+        inicializador = true;
     } else {
-        return;
-    }
-});
-
-document.addEventListener('keypress', function (e) {
-    if (e.which == 32) { //space
-        implementaSenha();
-    } else {
-        return;
+        implementaSenha();        
     }
 });
