@@ -133,12 +133,15 @@ h1 {
 .container-imagens {
     width: 38.2%;
     display: flex;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px -15px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px -35px 70px 4px;
 }
 
 .imagem {
     width: 100%;
 }
 
+strong {
+    font-weight: bold;
+}
 
 
