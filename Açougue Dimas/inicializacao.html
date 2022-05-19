@@ -17,11 +17,11 @@
         <div class="container-inicializacao">
             <article>
                 <ol id="lista">
-                    <li class="instrucao">1- Aperte <strong>F11</strong></li>
-                    <li class="instrucao">2- Digite a senha do dia</li>
-                    <li class="instrucao">3- Aperte <strong>ENTER</strong> para começar</li>
-                    <li class="instrucao">4- A cada cliente atendido, pressione <strong>ENTER</strong> novamente</li>
-                    <li class="instrucao">5- Caso haja algum problema, aperte <strong>F5</strong> para reiniciar a aplicação</li>
+                    <li class="lista__instrucao">1- Aperte <strong>F11</strong></li>
+                    <li class="lista__instrucao">2- Digite a senha do dia</li>
+                    <li class="lista__instrucao">3- Aperte <strong>ENTER</strong> para começar</li>
+                    <li class="lista__instrucao">4- A cada cliente atendido, pressione <strong>ENTER</strong> novamente</li>
+                    <li class="lista__instrucao">5- Caso haja algum problema, aperte <strong>F5</strong> para reiniciar a aplicação</li>
                 </ol>
             </article>
             <div class="input-container">
@@ -29,8 +29,16 @@
                 <label class="input-label" for="senha">Senha</label>
             </div>
         </div>
-        <!--div para a inserção da senha-->
-        <div class="inicia-aplicacao"></div>
+        <div class="inativo sinalizador" id="container-executando-app">
+            <div class="container-imagens">
+                <img src="assets/imgs/01.png" onload="slide1();" class="imagem">
+            </div>
+            <div class="container-senha">
+                <h1 class="senha__titulo">SENHA</h1>
+                <p class="senha__paragrafo"></p>
+            </div>
+        </div>
+
     </main>
     <footer>
         <div>
