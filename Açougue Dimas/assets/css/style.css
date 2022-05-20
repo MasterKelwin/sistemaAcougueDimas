@@ -67,17 +67,6 @@ ol {
     transition: all .2s;
 }
 
-footer {
-    height: 15vh;
-    background-color: var(--cor-contraste-claro);
-    display: flex;    
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.1rem;
-    color: var(--cor-primaria);
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-
 h1 {
     font-weight: bold;
 }
@@ -118,17 +107,34 @@ h1 {
 }
 
 .container-imagens {
-    width: 38.2%;
-    display: flex;
     box-shadow: rgba(0, 0, 0, 0.56) 0px -35px 70px 4px;
+    width: 38.2%;
+    position: relative;
+    height: 829px;
 }
 
 .imagem {
     width: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 800ms;
+}
+
+.ativa {
+    opacity: 1;
 }
 
 strong {
     font-weight: bold;
 }
 
-
+footer {
+    height: 15vh;
+    background-color: var(--cor-contraste-claro);
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--cor-primaria);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
