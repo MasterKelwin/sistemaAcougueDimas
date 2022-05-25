@@ -108,9 +108,10 @@ h1 {
 
 .container-imagens {
     box-shadow: rgba(0, 0, 0, 0.56) 0px -35px 70px 4px;
-    width: 38.2%;
+    background-color: var(--cor-primaria);
+    width: 38.2vw;
     position: relative;
-    height: 829px;
+    height: 85vh;
 }
 
 .imagem {
