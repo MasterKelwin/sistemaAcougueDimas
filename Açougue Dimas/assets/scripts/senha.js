@@ -7,6 +7,7 @@ let tempo = 12000;
 let imagemAtual = 0;
 let imagens = document.querySelectorAll(".container-imagens img");
 let max = imagens.length;
+let senha = $(".senha__paragrafo");
 
 const atualizaDOM = () => {
     divInicializacao.classList.add("inativo");
@@ -46,11 +47,27 @@ function iniciaRotacao() {
     setInterval(() => { proximaImagem() }, tempo);
 }
 
-document.addEventListener('keypress', function (e) {
-    if (e.which == 13 && inicializador == false) { //enter
+function Voz() {
+    const synth = window.speechSynthesis;
+    let falar = new SpeechSynthesisUtterance(`senha ${senha.innerText}`);
+    synth.speak(falar);
+}
+
+const mapaTeclado = {
+    Enter: 'senha'
+};
+
+function mapearTeclado(evento) {
+    const tecla = evento.key;
+    const teclaPermitida = () => Object.keys(mapaTeclado).indexOf(tecla) !== -1;
+    if (teclaPermitida() && inicializador == false) {
         atualizaDOM();
+        Voz();
         inicializador = true;
-    } else {
+    } else if (teclaPermitida() && inicializador == true) {
         implementaSenha();
+        Voz();
     }
-});
+}
+
+document.addEventListener('keydown', mapearTeclado);
