@@ -23,4 +23,4 @@ Linguagens utilizadas:
 
 2- CSS3 
 
-3- Javascript
+3- Javascript.
