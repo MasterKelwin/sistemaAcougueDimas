@@ -1,20 +1,3 @@
-body {
-    background-color: red;
-    font-family: 'Montserrat', sans-serif;
-    background: rgb(11,68,138);
-    background: linear-gradient(45deg, rgba(11,68,138,1) 0%, rgba(81,138,208,1) 100%);
-}
-
-body::-webkit-scrollbar{
-    width: 11px;
-    border: 1px solid rgb(200, 200, 200);
-}
-
-body::-webkit-scrollbar-thumb{
-    background-color: rgb(0, 95, 248);
-    border-radius: 5px;
-}
-
 .container-inicializacao {
     height: 85vh;
     display: flex;
@@ -26,7 +9,11 @@ ol {
     height: 10%;
 }
 
-.instrucao {
+.inativo {
+    display: none;
+}
+
+.lista__instrucao {
     margin: 1em;
     color: var(--cor-contraste-claro);
 }
@@ -80,17 +67,6 @@ ol {
     transition: all .2s;
 }
 
-footer {
-    height: 15vh;
-    background-color: var(--cor-contraste-claro);
-    display: flex;    
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.1rem;
-    color: var(--cor-primaria);
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-
 h1 {
     font-weight: bold;
 }
@@ -117,11 +93,12 @@ h1 {
 }
 
 .container-senha {
-    font-size: 10rem;
+    font-size: 12rem;
     font-weight: bold;
     text-align: center;
     margin: auto 0;
     color: var(--cor-contraste-claro);
+    padding-right: .2em;
 }
 
 .container-executando-app {
@@ -130,13 +107,35 @@ h1 {
 }
 
 .container-imagens {
-    width: 38.2%;
-    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px -35px 70px 4px;
+    background-color: var(--cor-primaria);
+    width: 38.2vw;
+    position: relative;
+    height: 85vh;
 }
 
 .imagem {
     width: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 800ms;
 }
 
+.ativa {
+    opacity: 1;
+}
 
+strong {
+    font-weight: bold;
+}
 
+footer {
+    height: 15vh;
+    background-color: var(--cor-contraste-claro);
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--cor-primaria);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}

@@ -1,78 +1,64 @@
 let $ = document.querySelector.bind(document);
 const input = $("#senha");
-const lista = $("#lista");
-const senhaDiv = $(".inicia-aplicacao");
 const divInicializacao = $(".container-inicializacao");
+const containerExecutandoApp = $(".sinalizador");
+let inicializador = false;
+let tempo = 12000;
+let imagemAtual = 0;
+let imagens = document.querySelectorAll(".container-imagens img");
+let max = imagens.length;
+const synth = window.speechSynthesis;
+let senha = $(".senha__paragrafo");
 
-const removeDivInput = () => {
-    divInicializacao.remove();
-};
+const atualizaDOM = () => {
+    divInicializacao.classList.add("inativo");
 
-const iniciaAplicacao = () => {
-    geraHTML();
-    removeDivInput();
-
-};
-
-const geraHTML = () => {
-    const containerExecutandoApp = document.createElement("div");
+    containerExecutandoApp.classList.remove("inativo");
     containerExecutandoApp.classList.add("container-executando-app");
 
-    const containerSenha = document.createElement("div");
-    containerSenha.classList.add("container-senha");
-
-    const containerImagens = document.createElement("div");
-    containerImagens.classList.add("container-imagens");
-
-    const titulo = document.createElement("h1");
-    titulo.innerText = "SENHA";
-    titulo.classList.add("senha__titulo");
-
-    const senhaReal = document.createElement("p");
-    senhaReal.classList.add("senha__paragrafo");
-    senhaReal.innerText = input.value;
-
-    const imagem = document.createElement("img");
-    imagem.classList.add("imagem");
-    imagem.src = "assets/imgs/01.png";
-
-    senhaDiv.appendChild(containerExecutandoApp);
-    containerExecutandoApp.appendChild(containerImagens);
-    containerExecutandoApp.appendChild(containerSenha);
-    containerImagens.appendChild(imagem);
-    containerSenha.appendChild(titulo);
-    containerSenha.appendChild(senhaReal);
+    const senhaExibida = $(".senha__paragrafo");
+    senhaExibida.innerText = input.value;
 }
 
-function implementaSenha() {   
-    let senhaExibida = $(".senha__paragrafo");
-    let senhaAtualizada =senhaExibida.textContent;
+const implementaSenha = () => {
+    const senhaExibida = $(".senha__paragrafo");
+    let senhaAtualizada = senhaExibida.textContent;
 
-    if (senhaAtualizada < 100) {
+    if (senhaAtualizada < 1000) {
         senhaAtualizada++;
-        console.log(senhaAtualizada);
         senhaExibida.innerHTML = senhaAtualizada;
-        
     } else {
         alert("Favor repor as senhas!");
-        return;
     }
 }
 
+function proximaImagem() {
+    imagens[imagemAtual].classList.remove("ativa");
+
+    imagemAtual++;
+
+    if (imagemAtual >= max) {
+        imagemAtual = 0
+    }
+
+    imagens[imagemAtual].classList.add("ativa");
+}
+
+function iniciaRotacao() {
+    setInterval(() => { proximaImagem() }, tempo);
+}
+
+function Voz() {
+    var falar = new SpeechSynthesisUtterance(senha.innerText);
+    synth.speak(falar);
+}
+
 document.addEventListener('keypress', function (e) {
-    if (e.which == 13) { //enter
-        iniciaAplicacao();
+    if (e.which == 13 && inicializador == false) { //enter
+        atualizaDOM();
+        inicializador = true;
     } else {
-        return;
+        implementaSenha();
+        Voz();
     }
 });
-
-document.addEventListener('keypress', function (e) {
-    if (e.which == 32) { //space
-       implementaSenha();
-    } else {
-        return;
-    }
-});
-
-
