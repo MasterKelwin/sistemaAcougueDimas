@@ -7,7 +7,6 @@ let tempo = 12000;
 let imagemAtual = 0;
 let imagens = document.querySelectorAll(".container-imagens img");
 let max = imagens.length;
-const synth = window.speechSynthesis;
 let senha = $(".senha__paragrafo");
 
 const atualizaDOM = () => {
@@ -49,16 +48,26 @@ function iniciaRotacao() {
 }
 
 function Voz() {
-    var falar = new SpeechSynthesisUtterance(senha.innerText);
+    const synth = window.speechSynthesis;
+    let falar = new SpeechSynthesisUtterance(`senha ${senha.innerText}`);
     synth.speak(falar);
 }
 
-document.addEventListener('keypress', function (e) {
-    if (e.which == 13 && inicializador == false) { //enter
+const mapaTeclado = {
+    Enter: 'senha'
+};
+
+function mapearTeclado(evento) {
+    const tecla = evento.key;
+    const teclaPermitida = () => Object.keys(mapaTeclado).indexOf(tecla) !== -1;
+    if (teclaPermitida() && inicializador == false) {
         atualizaDOM();
+        Voz();
         inicializador = true;
-    } else {
+    } else if (teclaPermitida() && inicializador == true) {
         implementaSenha();
         Voz();
     }
-});
+}
+
+document.addEventListener('keydown', mapearTeclado);
