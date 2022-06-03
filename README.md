@@ -18,9 +18,10 @@ Funcionalidades elaboradas:
 
 6- Troca de imagens durante a execução do site, para além da senha, os clientes também poderem ver as promoções atuais.
 
+7-Consumimos uma API para fazer a leitura da senha atual em voz alta, para os clientes poderem ouvir a nova senha sem a necessidade dos açougueiros avisarem.
+
 Linguagens utilizadas:
+
 1- HTML5
-
 2- CSS3 
-
-3- Javascript.
+3- Javascript
