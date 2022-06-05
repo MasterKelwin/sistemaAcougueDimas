@@ -60,13 +60,19 @@ const mapaTeclado = {
 function mapearTeclado(evento) {
     const tecla = evento.key;
     const teclaPermitida = () => Object.keys(mapaTeclado).indexOf(tecla) !== -1;
-    if (teclaPermitida() && inicializador == false) {
-        atualizaDOM();
-        Voz();
-        inicializador = true;
-    } else if (teclaPermitida() && inicializador == true) {
-        implementaSenha();
-        Voz();
+    
+    if (teclaPermitida()) {
+        switch(inicializador) {
+            case false: 
+                atualizaDOM();
+                Voz();
+                inicializador = true;
+                break;
+            case true:
+                implementaSenha();
+                Voz();
+                break;
+        }
     }
 }
 
